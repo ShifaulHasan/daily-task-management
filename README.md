@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -57,3 +58,30 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Daily Task Management App
+
+A simple **Laravel 12** project for managing daily tasks with features like:
+
+- User registration and login
+- Dashboard with today's tasks
+- Add new task
+- Edit / Delete task
+- View previous tasks history
+
+## Features
+
+1. **Add Task**: Save new tasks with title and description.
+2. **Today’s Tasks**: View all tasks added today.
+3. **Edit/Delete Tasks**: Update or remove any task.
+4. **Previous Tasks**: See tasks from previous days.
+5. **Simple, Clean Layout** using Tailwind CSS.
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/daily-task-management.git
+cd daily-task-management
+>>>>>>> de95341eedb64e12d8c0c19d65a6343f071f97ab
