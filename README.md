@@ -1,96 +1,131 @@
-# Daily Task Management App
+# 📝 Daily Task Management App
 
 ![Laravel](https://img.shields.io/badge/Laravel-12-red?style=flat)
 ![PHP](https://img.shields.io/badge/PHP-8.2-blue?style=flat)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
-A **Laravel 12** project to manage daily tasks with a simple dashboard, allowing users to add, edit, delete, and track their tasks.
+A **Laravel 12** web application to manage daily tasks through a simple dashboard. Users can add, edit, delete, and track their tasks, and look back at their previous tasks history.
 
 ---
 
-## Features
+## ✨ Features
 
-- User registration & login
+- User registration and login
 - Dashboard showing **today's tasks**
-- Add new task with title and description
-- Edit/Delete tasks
+- Add a new task with a title and description
+- Edit and delete tasks
 - View previous tasks history
-- Clean responsive layout with **Tailwind CSS**
+- Clean, responsive layout with **Tailwind CSS**
 
 ---
 
-## Installation
+## 🧰 Tech Stack
 
-1. Clone the repository:
+| Layer     | Technology            |
+|-----------|-----------------------|
+| Framework | Laravel 12            |
+| Language  | PHP 8.2               |
+| Database  | MySQL / SQLite        |
+| Styling   | Tailwind CSS          |
+| Build tool| Vite                  |
 
-```bash
-Install PHP dependencies:
+---
 
-composer install
+## 📁 Folder Structure
+
+```
+daily-task-management/
+├── app/
+│   └── Http/Controllers/TaskController.php
+├── resources/
+│   └── views/
+│       └── tasks/
+│           ├── create.blade.php
+│           ├── edit.blade.php
+│           ├── history.blade.php
+│           └── index.blade.php
+├── routes/           # Web routes
+├── database/         # Migrations
+├── public/           # Public assets
+└── ...
+```
+
+---
+
+## 🚀 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ShifaulHasan/daily-task-management.git
+   cd daily-task-management
+   ```
+
+2. **Install PHP dependencies**
+   ```bash
+   composer install
+   ```
+
+3. **Install Node.js dependencies**
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+4. **Set up the environment file**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+   Then open `.env` and set your database details (`DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`).
+
+5. **Create the `tasks` table** manually in your database:
+   ```sql
+   CREATE TABLE tasks (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       title VARCHAR(255) NOT NULL,
+       description TEXT,
+       date DATE NOT NULL,
+       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+       updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+   );
+   ```
+
+6. **Run the project**
+   ```bash
+   php artisan serve
+   ```
+   Visit [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+---
+
+## 📖 Usage
+
+1. Register a new user
+2. Log in to access the dashboard
+3. Click **Add Task** to create a new task
+4. Edit or delete tasks from **Today's Tasks**
+5. Check **Previous Tasks** to see your history
+
+---
 
 
-Install Node.js dependencies:
 
-npm install
-npm run dev
+## 🔮 Future Improvements
 
+- Mark tasks as completed
+- Task priority and due-time reminders
+- Search and filter tasks
+- Calendar view
 
-Copy .env.example to .env and configure database:
+---
 
-cp .env.example .env
-php artisan key:generate
+## 👨‍💻 Author
 
+**Md. Shifaul Hasan**
+GitHub: [@ShifaulHasan](https://github.com/ShifaulHasan)
 
-Manually create the tasks table in your database:
+---
 
-CREATE TABLE tasks (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    description TEXT,
-    date DATE NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+## 📄 License
 
-
-Run the project:
-
-php artisan serve
-
-
-Visit http://127.0.0.1:8000
-
-Usage
-
-Register a new user
-
-Login to access the dashboard
-
-Add new tasks using Add Task
-
-Edit or delete tasks from Today’s Tasks
-
-Check Previous Tasks for history
-
-Folder Structure
-app/
-├── Http/Controllers/TaskController.php
-resources/
-├── views/
-│   ├── tasks/
-│   │   ├── create.blade.php
-│   │   ├── edit.blade.php
-│   │   ├── history.blade.php
-│   │   └── index.blade.php
-
-Technologies
-
-Laravel 12
-
-PHP 8.2
-
-MySQL / SQLite
-
-Tailwind CSS
-git clone https://github.com/ShifaulHasan/daily-task-management.git
-cd daily-task-management
+This project is open-source and available under the [MIT License](LICENSE).
